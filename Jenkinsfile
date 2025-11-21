@@ -10,27 +10,27 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t todo-app-image .'
+                bat 'docker build -t todo-app-image .'
             }
         }
 
         stage('Trivy Scan') {
             steps {
-                sh 'trivy image todo-app-image || true'
+                bat 'wsl trivy image todo-app-image || true'
             }
         }
 
         stage('Run Container') {
             steps {
-                sh 'docker run -d -p 3000:3000 --name todo-container todo-app-image'
+                bat 'docker run -d -p 3000:3000 --name todo-container todo-app-image'
             }
         }
     }
 
     post {
         always {
-            sh 'docker stop todo-container || true'
-            sh 'docker rm todo-container || true'
+            bat 'docker stop todo-container || true'
+            bat 'docker rm todo-container || true'
         }
     }
 }
