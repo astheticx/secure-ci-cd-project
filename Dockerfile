@@ -1,4 +1,4 @@
-hi 
+
 FROM node:18
 
 # 2. Set working directory inside container
