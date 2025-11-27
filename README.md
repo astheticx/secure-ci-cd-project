@@ -137,15 +137,30 @@ http://localhost:3000
 
 ---
 
+---
+
 ## 📸 Screenshots
 
-Add in: `docs/screenshots/`  
-- Jenkins pipeline  
-- Trivy output  
-- Application UI  
-- Container status  
+### **1️⃣ Jenkins Pipeline Running**
+![Jenkins Pipeline Screenshot](docs/screenshots/jenkins-pipeline.png)
+
+### **2️⃣ Jenkins Build Successful**
+![Jenkins Success Screenshot](docs/screenshots/jenkins-success.png)
+
+### **3️⃣ Docker Images List**
+![Docker Images](docs/screenshots/docker-images.png)
+
+### **4️⃣ Running Docker Containers**
+![Docker PS](docs/screenshots/docker-ps.png)
+
+### **5️⃣ Trivy Vulnerability Scan Output**
+![Trivy Scan Report](docs/screenshots/trivy-scan.png)
+
+### **6️⃣ Application Running on Browser**
+![To-Do App Running](docs/screenshots/app-running.png)
 
 ---
+
 
 ## 🔮 Future Improvements
 
