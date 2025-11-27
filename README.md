@@ -144,8 +144,7 @@ http://localhost:3000
 ### **1️⃣ Jenkins Pipeline Running**
 ![Jenkins Pipeline Screenshot](docs/screenshots/jenkins-pipeline.png)
 
-### **2️⃣ Jenkins Build Successful**
-![Jenkins Success Screenshot](docs/screenshots/jenkins-success.png)
+
 
 ### **3️⃣ Docker Images List**
 ![Docker Images](docs/screenshots/docker-images.png)
