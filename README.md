@@ -32,9 +32,6 @@ The workflow ensures **secure, fast, and automated delivery** of the application
 
 ---
 
-## 🏗️ Architecture Diagram
-
-(Add your diagram image here — `docs/architecture.png`)
 
 ```
 Developer → GitHub → Jenkins → Docker Build → Trivy Scan → Deploy → User
