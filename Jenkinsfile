@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     stages {
+
         stage('Checkout Code') {
             steps {
                 git url: 'https://github.com/astheticx/secure-ci-cd-project.git', branch: 'main'
@@ -20,17 +21,23 @@ pipeline {
             }
         }
 
-        stage('Run Container') {
+        stage('Deploy Container') {
             steps {
-                bat 'docker run -d -p 3000:3000 --name todo-container todo-app-image'
+                bat '''
+                    docker stop todo-container || true
+                    docker rm todo-container || true
+                    docker run -d -p 3000:3000 --name todo-container todo-app-image
+                '''
             }
         }
     }
 
     post {
-        always {
-            bat 'docker stop todo-container || true'
-            bat 'docker rm todo-container || true'
+        success {
+            echo 'Build successful. Application is deployed and running on http://localhost:3000'
+        }
+        failure {
+            echo 'Build failed. Please check pipeline logs.'
         }
     }
 }
