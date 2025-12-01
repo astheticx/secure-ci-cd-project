@@ -17,15 +17,15 @@ pipeline {
             }
         }
 
-   stage('Trivy Scan') {
+stage('Trivy Scan') {
     steps {
         bat """
-        echo Running Trivy Scan in JSON format...
+        echo Running Trivy Scan...
         wsl trivy image --format json todo-app-image > trivy-report.json
-        type trivy-report.json
         """
     }
 }
+
 
 
         stage('Deploy Container') {
